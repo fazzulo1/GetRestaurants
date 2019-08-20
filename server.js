@@ -32,7 +32,7 @@ const seed = require('./models/seed');
 const Restaurant = require('./models/restarauntSchema');
 app.get('/seed', (req, res) => {
   Restaurant.create(seed, (err, createdRestaurant) => {
-    res.redirect('/restauntant');
+    res.redirect('/restaurant');
   });
 });
 
