@@ -1,3 +1,9 @@
 # GetRestaurants
+
 A web application to find restaurants information from our database
-Aaliyah Rodriguez
+
+# Harold Miranda
+
+# Nick Ortiz
+
+#Aaliyah Rodriguez
