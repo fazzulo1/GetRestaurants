@@ -1,0 +1,26 @@
+{
+  "name": "getrestaurants",
+  "version": "1.0.0",
+  "description": "A web application to find restaurants information from our database",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fazzulo1/GetRestaurants.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fazzulo1/GetRestaurants/issues"
+  },
+  "homepage": "https://github.com/fazzulo1/GetRestaurants#readme",
+  "keywords": [],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.9"
+  }
+}
