@@ -5,7 +5,7 @@ const restarauntSchema = mongoose.Schema({
   image: { type: String },
   address: { type: String, default: 'No address provided' },
   theme: [String],
-  menu: [[String], [String]],
+  menu: [String],
   like: { type: Number, default: 0 },
   url: { type: String, default: 'This restaraunt does not have a website' },
   phone: { type: String, default: 'No phone number provided' }
