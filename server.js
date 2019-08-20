@@ -4,19 +4,32 @@ const cors = require('cors');
 const app = express ();
 const Port = 3003;
 
+
+const restaurantController = require('./controllers/restaurantcontroller')
 // Middleware
 app.use(express.json());
 
 
-app.get('/', (req,res)=> {
-    res.send('hello')
-})
+// app.get('/', (req,res)=> {
+//     res.send('hello world')
+// })
 
 
 
 // CORS
-const whiteList = ['http://localhost:3000',]
+// const whitelist = ['http://localhost:3000', 'https://fathomless-sierra-68956.herokuapp.com']
+// const corsOptions = {
+//     origin: (origin, callback) => {
+//         if (whitelist.indexOf(origin) !== -1) {
+//             callback(null, true)
+//         } else {
+//             callback(new Error('Not allowed by CORS'))
+//         }
+//     }
+// }
+// app.use(cors(corsOptions))
 
+app.use('/restaurant', restaurantController)
 
 // Error / Disconnection
 mongoose.connection.on('error', err => console.log(err.message + ' is Mongod not running?'))
