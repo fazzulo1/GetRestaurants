@@ -6,4 +6,4 @@ A web application to find restaurants information from our database
 
 # Nick Ortiz
 
-#Aaliyah Rodriguez
+# Aaliyah Rodriguez
