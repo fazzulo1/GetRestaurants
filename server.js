@@ -45,7 +45,7 @@ mongoose.connection.on('error', err =>
 );
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 
-mongoose.connect('mongodb://localhost:27017/bookmark', {
+mongoose.connect('mongodb://localhost:27017/restaurant', {
   useNewUrlParser: true
 });
 mongoose.connection.once('open', () => {
