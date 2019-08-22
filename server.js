@@ -5,12 +5,9 @@ const app = express();
 const Port = 3003;
 
 const restaurantController = require('./controllers/restaurantcontroller');
+const userController = require('./controllers/user');
 // Middleware
 app.use(express.json());
-
-// app.get('/', (req,res)=> {
-//     res.send('hello world')
-// })
 
 // CORS
 const whitelist = [
@@ -29,6 +26,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use('/restaurant', restaurantController);
+app.use('/user', userController);
 
 // seed
 const seed = require('./models/seed');
