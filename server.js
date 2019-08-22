@@ -8,22 +8,20 @@ const restaurantController = require('./controllers/restaurantcontroller');
 // Middleware
 app.use(express.json());
 
-// app.get('/', (req,res)=> {
-//     res.send('hello world')
-// })
+
 
 // CORS
-// const whitelist = ['http://localhost:3000', 'https://fathomless-sierra-68956.herokuapp.com']
-// const corsOptions = {
-//     origin: (origin, callback) => {
-//         if (whitelist.indexOf(origin) !== -1) {
-//             callback(null, true)
-//         } else {
-//             callback(new Error('Not allowed by CORS'))
-//         }
-//     }
-// }
-// app.use(cors(corsOptions))
+const whitelist = ['http://localhost:3000', 'https://fathomless-sierra-68956.herokuapp.com']
+const corsOptions = {
+    origin: (origin, callback) => {
+        if (whitelist.indexOf(origin) !== -1) {
+            callback(null, true)
+        } else {
+            callback(new Error('Not allowed by CORS'))
+        }
+    }
+}
+app.use(cors(corsOptions))
 
 app.use('/restaurant', restaurantController);
 
