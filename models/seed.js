@@ -2,7 +2,7 @@ let seedData = [
   {
     name: 'Capriccio Cafe',
     image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRifTiK9G6MNIAHgpcThHt2ucFrJY5gq6__rVAwJefzKGb40fm51g',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS069YYMVb5q6lB7AzJbzoXhNsmB0068kP2dvfEgCki1reWRBmP_Q',
     address: '189 Bedford St',
     theme: ['Italian'],
     menu: {
