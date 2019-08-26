@@ -17,12 +17,14 @@ user.post('/login', (req, res) => {
 });
 
 user.post('/register', (req, res) => {
+  console.log('received', req.body);
   User.create(req.body, (err, createdUser) => {
     if (err) {
       res.status(400).json({
         error: err.message
       });
     }
+    console.log('created', createdUser);
     res.status(200).json(createdUser);
   });
 });
