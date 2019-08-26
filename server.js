@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
-const Port = 3003;
+const Port = process.env.PORT || 3003;
 
 const restaurantController = require('./controllers/restaurantcontroller');
 const userController = require('./controllers/user');
@@ -40,7 +40,10 @@ mongoose.connection.on('error', err =>
 );
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 
-mongoose.connect('mongodb://localhost:27017/restaurant', {
+const MONGODB_URI =
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/restaurant';
+
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true
 });
 mongoose.connection.once('open', () => {
