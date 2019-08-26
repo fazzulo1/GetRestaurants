@@ -9,18 +9,18 @@ const userController = require('./controllers/user');
 // Middleware
 app.use(express.json());
 
-// CORS
-// const whitelist = ['http://localhost:3000', 'disastrous-north.surge.sh'];
-// const corsOptions = {
-//   origin: (origin, callback) => {
-//     if (whitelist.indexOf(origin) !== -1) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   }
-// };
-// app.use(cors(corsOptions));
+// CORS;
+const whitelist = ['http://localhost:3000', 'disastrous-north.surge.sh'];
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
+app.use(cors(corsOptions));
 
 app.use('/restaurant', restaurantController);
 app.use('/user', userController);
