@@ -10,7 +10,7 @@ const userController = require('./controllers/user');
 app.use(express.json());
 
 // CORS;
-const whitelist = ['http://localhost:3000', 'disastrous-north.surge.sh'];
+const whitelist = ['http://localhost:3000', 'http://disastrous-north.surge.sh'];
 const corsOptions = {
   origin: (origin, callback) => {
     if (whitelist.indexOf(origin) !== -1) {
